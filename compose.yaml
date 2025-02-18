@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  daa-displays:
+    image: daa-displays
+    container_name: daa-displays
+    entrypoint: /bin/bash
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/app/daa-displays
+    ports:
+      - "8082:8082"
